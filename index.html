@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio | Diseñador Gráfico & Editor</title>
+    <meta
+      name="description"
+      content="Portafolio de diseño gráfico y edición de video. Proyectos para streamers, emprendimientos y contenido para TikTok."
+    />
+    <link rel="icon" href="./logo/logoegr.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-gradient"></div>
+
+    <header class="header">
+      <div class="header__brand">
+        <div class="logo-mark" aria-hidden="true">
+          <img
+            src="./logo/logoegr.png"
+            alt="EGR EDIT"
+            class="logo-img"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">EGR EDIT</span>
+          <span class="brand-role">Diseño gráfico & edición</span>
+        </div>
+      </div>
+
+      <nav class="header__nav">
+        <a href="#streamers" class="nav-link">Streamers</a>
+        <a href="#emprendimientos" class="nav-link">Emprendimientos</a>
+        <a href="#tiktoks" class="nav-link">Videos TikTok</a>
+      </nav>
+
+      <button class="header__cta" onclick="scrollToContact()">
+        Hablemos de tu proyecto
+      </button>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Portafolio creativo</p>
+          <h1 class="hero__title">
+            Diseño & edición
+            <span class="hero__title-highlight">que se siente profesional</span>
+          </h1>
+          <p class="hero__subtitle">
+            Transformo ideas en visuales potentes para
+            <span class="text-strong">streamers</span>,
+            <span class="text-strong">marcas</span> y
+            <span class="text-strong">contenido corto</span>.
+          </p>
+
+          <div class="hero__actions">
+            <button class="btn btn-primary" onclick="scrollToWork()">
+              Ver trabajos
+            </button>
+            <button class="btn btn-ghost" onclick="scrollToContact()">
+              Solicitar presupuesto
+            </button>
+          </div>
+
+          <div class="hero__meta">
+            <div class="meta-item">
+              <span class="meta-number">+50</span>
+              <span class="meta-label">piezas para streamers</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-number">+20</span>
+              <span class="meta-label">marcas & emprendimientos</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-number">+100</span>
+              <span class="meta-label">videos cortos editados</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__preview">
+          <div class="preview-card preview-card--main tilt">
+            <div class="preview-card__label">Highlight Reel</div>
+            <div class="preview-card__thumb preview-card__thumb--video">
+              <iframe
+                src="https://www.tiktok.com/embed/v2/7594936526174244107"
+                title="TikTok de EGR EDIT"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="preview-card__footer">
+              <span class="dot dot--live"></span>
+              <span>Edición dinámica · Motion · Color</span>
+            </div>
+          </div>
+
+          <div class="preview-stack">
+            <div class="preview-chip">Overlays para stream</div>
+            <div class="preview-chip">Intro de canal</div>
+            <div class="preview-chip">Ads para emprendimientos</div>
+            <div class="preview-chip">Contenido vertical TikTok / Reels</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section class="section" id="trabajos">
+        <div class="section__header">
+          <h2>Mis trabajos</h2>
+          <p>Explora el portafolio filtrando por tipo de proyecto.</p>
+        </div>
+
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">
+            Todo
+          </button>
+          <button class="filter-btn" data-filter="streamers">
+            Streamers
+          </button>
+          <button class="filter-btn" data-filter="emprendimientos">
+            Emprendimientos
+          </button>
+          <button class="filter-btn" data-filter="tiktoks">
+            Videos TikTok
+          </button>
+        </div>
+
+        <div class="grid" id="portfolio-grid">
+          <!-- STREAMERS -->
+          <article
+            class="card tilt"
+            data-category="streamers"
+            id="streamers"
+          >
+            <div class="card__tag">Streamers</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./stremers/presentaicon terminado.png"
+                alt="Overlay de presentación para stream"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Identidad visual para streamer</h3>
+              <p>
+                Diseño de logo, pantalla de inicio, transiciones y banners
+                coherentes con la personalidad del canal.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Branding · Motion · Overlay</span>
+              <button class="card__link" data-modal="streamer-pack-1">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="streamers">
+            <div class="card__tag">Streamers</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./stremers/sleep live.jpg"
+                alt="Diseño de pantalla para stream en vivo"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Intro animada para Twitch / YouTube</h3>
+              <p>
+                Animación corta con logo, transiciones fluidas y música
+                adaptada al estilo del creador.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>After Effects · Edición</span>
+              <button class="card__link" data-modal="streamer-intro-1">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="streamers">
+            <div class="card__tag">Streamers</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./stremers/bruno y mati terminado.jpg"
+                alt="Arte para stream Brunenger y Mati"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Arte para stream – Brunenger & Mati</h3>
+              <p>
+                Composición con dos creadores, ideal para pantalla de inicio o promo en redes.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Stream · Duo</span>
+              <button class="card__link" data-modal="streamer-3">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="streamers">
+            <div class="card__tag">Streamers</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./stremers/FLAYER 3 v2.jpg"
+                alt="Flyer de stream"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Flyer para stream</h3>
+              <p>
+                Gráfico para anunciar directos, con información clave y estética gamer.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Flyer · Streaming</span>
+              <button class="card__link" data-modal="streamer-4">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="streamers">
+            <div class="card__tag">Streamers</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./stremers/MacheteSlot.png"
+                alt="Machete de slots"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Gráfico para slots</h3>
+              <p>
+                Visual de apoyo para streams de slots, con estructura clara y legible.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Slots · Visual</span>
+              <button class="card__link" data-modal="streamer-5">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="streamers">
+            <div class="card__tag">Streamers</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./stremers/neuquen brunenger.jpg"
+                alt="Evento Brunenger Neuquén"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Evento Brunenger Neuquén</h3>
+              <p>
+                Arte para evento presencial, manteniendo la identidad del creador.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Evento · Streamer</span>
+              <button class="card__link" data-modal="streamer-6">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="streamers">
+            <div class="card__tag">Streamers</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./stremers/terminado 1.jpg"
+                alt="Arte de stream 1"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Arte de stream 1</h3>
+              <p>
+                Composición principal para directo, con foco en el creador y el título.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Arte principal</span>
+              <button class="card__link" data-modal="streamer-7">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="streamers">
+            <div class="card__tag">Streamers</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./stremers/terminado 1 (1).jpg"
+                alt="Arte de stream 1 variante"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Arte de stream 1 · Variante</h3>
+              <p>
+                Versión alternativa del diseño anterior, probando ajustes de color y detalles.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Variante · Color</span>
+              <button class="card__link" data-modal="streamer-8">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="streamers">
+            <div class="card__tag">Streamers</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./stremers/Terminado Brunenger.jpg"
+                alt="Arte Brunenger"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Arte Brunenger</h3>
+              <p>
+                Diseño centrado en el creador, ideal para miniatura o portada de video.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Miniatura · Portada</span>
+              <button class="card__link" data-modal="streamer-9">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="streamers">
+            <div class="card__tag">Streamers</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./stremers/terminado con el wandi.jpg"
+                alt="Arte con Wandi"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Arte con Wandi</h3>
+              <p>
+                Composición con dos personajes, pensada para generar impacto visual.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Duo · Promoción</span>
+              <button class="card__link" data-modal="streamer-10">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="streamers">
+            <div class="card__tag">Streamers</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./stremers/terminadov2.jpg"
+                alt="Arte de stream versión final"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Versión final de arte</h3>
+              <p>
+                Ajustes finales de color, contraste y detalles para cerrar el diseño.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Versión final</span>
+              <button class="card__link" data-modal="streamer-11">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <!-- EMPRENDIMIENTOS -->
+          <article
+            class="card tilt"
+            data-category="emprendimientos"
+            id="emprendimientos"
+          >
+            <div class="card__tag">Emprendimientos</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./emprndimientos/Pormo birra.jpg"
+                alt="Promo de bebida para emprendimiento"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Pack de identidad para marca</h3>
+              <p>
+                Diseño de logo, paleta de color, piezas para redes y
+                presentación simple del producto o servicio.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Branding · Redes sociales</span>
+              <button class="card__link" data-modal="brand-pack-1">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="emprendimientos">
+            <div class="card__tag">Emprendimientos</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./emprndimientos/sabadoinvierno.jpg"
+                alt="Flyer para evento de emprendimiento"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Anuncio para lanzamiento de producto</h3>
+              <p>
+                Video corto pensado para captar atención en los primeros
+                segundos, optimizado para redes.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Storytelling · Edición dinámica</span>
+              <button class="card__link" data-modal="launch-ad-1">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="emprendimientos">
+            <div class="card__tag">Emprendimientos</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./emprndimientos/BBTERMINADO.jpg"
+                alt="Promo BB"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Promo BB</h3>
+              <p>
+                Gráfico comercial con foco en el producto y el mensaje de marca.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Promo · Marca</span>
+              <button class="card__link" data-modal="brand-2">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="emprendimientos">
+            <div class="card__tag">Emprendimientos</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./emprndimientos/Joda.jpg"
+                alt="Flyer Joda"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Flyer Joda</h3>
+              <p>
+                Diseño para fiesta con tipografía grande y energía nocturna.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Evento · Fiesta</span>
+              <button class="card__link" data-modal="brand-3">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="emprendimientos">
+            <div class="card__tag">Emprendimientos</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./emprndimientos/sabado cachengue.jpg"
+                alt="Sabado cachengue"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Sábado cachengue</h3>
+              <p>
+                Flyer para noche de cachengue, destacando fecha y lugar.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Boliche · Evento</span>
+              <button class="card__link" data-modal="brand-4">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="emprendimientos">
+            <div class="card__tag">Emprendimientos</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./emprndimientos/Sin t\u00edtulo-1 (2).jpg"
+                alt="Diseño experimental"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Diseño experimental</h3>
+              <p>
+                Composición creativa que explora color, forma y tipografía.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Experimental</span>
+              <button class="card__link" data-modal="brand-5">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="emprendimientos">
+            <div class="card__tag">Emprendimientos</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./emprndimientos/terminado karaoke.jpg"
+                alt="Flyer karaoke"
+              />
+            </div>
+            <div class="card__body">
+              <h3>Noche de karaoke</h3>
+              <p>
+                Diseño para evento de karaoke, con iconografía y estilo acorde a la temática.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Evento · Karaoke</span>
+              <button class="card__link" data-modal="brand-6">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="emprendimientos">
+            <div class="card__tag">Emprendimientos</div>
+            <div class="card__thumb media-thumb">
+              <img
+                src="./emprndimientos/terminado san valentin.jpg"
+                alt="San Valentín"
+              />
+            </div>
+            <div class="card__body">
+              <h3>San Valentín</h3>
+              <p>
+                Flyer romántico para fecha especial, ideal para bares o eventos temáticos.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>San Valentín</span>
+              <button class="card__link" data-modal="brand-7">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <!-- TIKTOKS -->
+          <article
+            class="card tilt"
+            data-category="tiktoks"
+            id="tiktoks"
+          >
+            <div class="card__tag">Videos TikTok</div>
+            <div class="card__thumb media-thumb media-thumb--video">
+              <video
+                src="./tiktoks/1.mp4"
+                controls
+                playsinline
+                preload="metadata"
+              ></video>
+            </div>
+            <div class="card__body">
+              <h3>Serie de contenido para TikTok</h3>
+              <p>
+                Edición de varios formatos (tips, historias, trends) con
+                subtítulos dinámicos y cortes precisos.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Vertical · Subtítulos · Hooks</span>
+              <button class="card__link" data-modal="tiktok-series-1">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="tiktoks">
+            <div class="card__tag">Videos TikTok</div>
+            <div class="card__thumb media-thumb media-thumb--video">
+              <video
+                src="./tiktoks/2.mp4"
+                controls
+                playsinline
+                preload="metadata"
+              ></video>
+            </div>
+            <div class="card__body">
+              <h3>Reel de highlights para redes</h3>
+              <p>
+                Selección de los mejores momentos con ritmo rápido, zooms y
+                efectos que mantienen la atención.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Highlights · Ritmo rápido</span>
+              <button class="card__link" data-modal="highlights-1">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="tiktoks">
+            <div class="card__tag">Videos TikTok</div>
+            <div class="card__thumb media-thumb media-thumb--video">
+              <video
+                src="./tiktoks/3.mp4"
+                controls
+                playsinline
+                preload="metadata"
+              ></video>
+            </div>
+            <div class="card__body">
+              <h3>Video TikTok 3</h3>
+              <p>
+                Tercer clip de contenido corto, pensado para enganchar rápido al espectador.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Vertical · Contenido corto</span>
+              <button class="card__link" data-modal="tiktok-3">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="tiktoks">
+            <div class="card__tag">Videos TikTok</div>
+            <div class="card__thumb media-thumb media-thumb--video">
+              <video
+                src="./tiktoks/4.mp4"
+                controls
+                playsinline
+                preload="metadata"
+              ></video>
+            </div>
+            <div class="card__body">
+              <h3>Video TikTok 4</h3>
+              <p>
+                Cuarto video, adaptable también a Reels o Shorts sin perder calidad visual.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Reels · Shorts</span>
+              <button class="card__link" data-modal="tiktok-4">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="tiktoks">
+            <div class="card__tag">Videos TikTok</div>
+            <div class="card__thumb media-thumb media-thumb--video">
+              <video
+                src="./tiktoks/5.mp4"
+                controls
+                playsinline
+                preload="metadata"
+              ></video>
+            </div>
+            <div class="card__body">
+              <h3>Video TikTok 5</h3>
+              <p>
+                Pieza corta con cortes y zooms que mantienen el ritmo del contenido.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Ritmo · Zooms</span>
+              <button class="card__link" data-modal="tiktok-5">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+
+          <article class="card tilt" data-category="tiktoks">
+            <div class="card__tag">Videos TikTok</div>
+            <div class="card__thumb media-thumb media-thumb--video">
+              <video
+                src="./tiktoks/6.mp4"
+                controls
+                playsinline
+                preload="metadata"
+              ></video>
+            </div>
+            <div class="card__body">
+              <h3>Video TikTok 6</h3>
+              <p>
+                Último clip de la serie, cuidado en color, ritmo y composición.
+              </p>
+            </div>
+            <div class="card__footer">
+              <span>Serie completa</span>
+              <button class="card__link" data-modal="tiktok-6">
+                Ver detalle
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <button class="btn btn-ghost load-more" id="load-more">
+          Cargar más proyectos
+        </button>
+      </section>
+
+      <!-- PROCESS / SERVICES -->
+      <section class="section section--split">
+        <div class="section__header">
+          <h2>¿Cómo trabajo tus piezas?</h2>
+          <p>
+            Proceso pensado para creadores y marcas que necesitan piezas
+            claras, profesionales y listas para publicar.
+          </p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step__number">01</span>
+            <h3>Brief rápido</h3>
+            <p>
+              Entendemos tu idea, el estilo que buscas y el tipo de contenido
+              que necesitas (stream, marca o TikTok).
+            </p>
+          </div>
+          <div class="step">
+            <span class="step__number">02</span>
+            <h3>Concepto visual</h3>
+            <p>
+              Creo una propuesta visual clara con referencias y ejemplos para
+              asegurarnos de ir en la misma dirección.
+            </p>
+          </div>
+          <div class="step">
+            <span class="step__number">03</span>
+            <h3>Producción & edición</h3>
+            <p>
+              Diseño y edito las piezas finales optimizadas para la
+              plataforma donde las vas a usar.
+            </p>
+          </div>
+          <div class="step">
+            <span class="step__number">04</span>
+            <h3>Entrega lista para publicar</h3>
+            <p>
+              Entrego archivos en los formatos correctos, organizados y
+              listos para que solo tengas que subir y compartir.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section section--contact" id="contacto">
+        <div class="section__header">
+          <h2>¿Hacemos algo juntos?</h2>
+          <p>
+            Cuéntame de tu proyecto y te respondo con una propuesta simple y
+            clara.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/maypvywy"
+            method="POST"
+          >
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Nombre</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Cómo te llamas"
+                  required
+                />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="donde@te.escribo"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="project-type">Tipo de proyecto</label>
+              <select id="project-type" name="project-type">
+                <option value="streamer">Para stream / canal</option>
+                <option value="emprendimiento">Para marca / emprendimiento</option>
+                <option value="tiktok">Videos TikTok / Reels</option>
+                <option value="otro">Otro tipo de contenido</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Cuéntame tu idea</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Qué necesitas, plazos, referencias, etc."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              Enviar proyecto
+            </button>
+            <p style="margin-top: 8px; font-size: 0.8rem; color: #9ea2b8;">
+              O si prefieres, escríbeme directo a
+              <a href="mailto:erikrossio2015@gmail.com">erikrossio2015@gmail.com</a>,
+              <a href="https://www.instagram.com/erikrossio" target="_blank" rel="noreferrer">Instagram</a>
+              o
+              <a href="https://twitter.com/Smooki06" target="_blank" rel="noreferrer">Twitter</a>.
+            </p>
+          </form>
+
+          <div class="contact-info">
+            <div class="contact-card">
+              <h3>Info de contacto</h3>
+              <p>Puedes escribirme directo a:</p>
+              <ul>
+                <li><span>Email</span><span>erikrossio2015@gmail.com</span></li>
+                <li><span>Instagram</span><span>@erikrossio</span></li>
+                <li><span>Twitter</span><span>@Smooki06</span></li>
+                <li><span>Ubicación</span><span>Latam · Remoto</span></li>
+              </ul>
+            </div>
+
+            <div class="contact-card contact-card--note">
+              <h3>Ideal para ti si...</h3>
+              <ul>
+                <li>Quieres una identidad visual clara para tu canal o marca.</li>
+                <li>Te falta tiempo para editar tus videos con calidad.</li>
+                <li>Buscas alguien que entienda el lenguaje de redes.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Portafolio. Todos los derechos reservados.</span>
+      <span class="footer__hint">Diseño minimalista · Estilo oscuro · Foco en el contenido</span>
+    </footer>
+
+    <!-- Modal base (puedes duplicar y personalizar texto para cada proyecto) -->
+    <div class="modal" id="modal">
+      <div class="modal__backdrop" data-close-modal></div>
+      <div class="modal__content">
+        <button class="modal__close" data-close-modal>&times;</button>
+        <div class="modal__body">
+          <div id="modal-media" class="modal__media"></div>
+          <h2 id="modal-title">Título del proyecto</h2>
+          <p id="modal-description">
+            Aquí puedes describir mejor el proyecto, el objetivo, el proceso de diseño / edición y el resultado final.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
