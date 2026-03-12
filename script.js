@@ -15,6 +15,7 @@ const visibleByFilter = {
   emprendimientos: PAGE_SIZE,
   tiktoks: PAGE_SIZE
 };
+const contactForm = document.querySelector(".contact-form");
 
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear().toString();
@@ -99,6 +100,44 @@ if (loadMoreBtn) {
     const key = currentFilter || "all";
     visibleByFilter[key] = (visibleByFilter[key] || PAGE_SIZE) + PAGE_SIZE;
     applyFilter(key, false);
+  });
+}
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const formData = new FormData(contactForm);
+    const action = contactForm.getAttribute("action");
+
+    try {
+      const response = await fetch(action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        alert("Gracias, tu mensaje fue enviado. Te responderé a la brevedad.");
+        contactForm.reset();
+        return;
+      }
+    } catch (err) {
+      // seguimos al fallback
+    }
+
+    const name = formData.get("name") || "";
+    const email = formData.get("email") || "";
+    const type = formData.get("project-type") || "";
+    const message = formData.get("message") || "";
+
+    const subject = encodeURIComponent("Nuevo proyecto desde el portafolio");
+    const body = encodeURIComponent(
+      `Nombre: ${name}\nEmail: ${email}\nTipo de proyecto: ${type}\n\nMensaje:\n${message}`
+    );
+
+    window.location.href = `mailto:erikrossio2015@gmail.com?subject=${subject}&body=${body}`;
   });
 }
 
